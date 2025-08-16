@@ -17,9 +17,9 @@ public class AdopcionMascotas {
      public void adoptar() {
         if (!adoptada) {
             adoptada = true;
-            System.out.println(nombre + " ha sido adoptado/a.");
+            System.out.println(nombre + " ha sido adoptado(a). :D");
         } else {
-            System.out.println(nombre + " ya estaba adoptado/a.");
+            System.out.println(nombre + " ya estaba adoptado(a). :D");
         }
     } 
     public static void main(String[] args) {
@@ -32,3 +32,4 @@ public class AdopcionMascotas {
         m1.mostrarInfo();
     }
 }
+
