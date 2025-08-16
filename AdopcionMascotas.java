@@ -14,6 +14,14 @@ public class AdopcionMascotas {
         System.out.println("Estado: " + (adoptada ? "Adoptada" : "Disponible"));
     }
 
+     public void adoptar() {
+        if (!adoptada) {
+            adoptada = true;
+            System.out.println(nombre + " ha sido adoptado/a.");
+        } else {
+            System.out.println(nombre + " ya estaba adoptado/a.");
+        }
+    } 
     public static void main(String[] args) {
         AdopcionMascotas m1 = new AdopcionMascotas();
         m1.nombre = "Luna";
