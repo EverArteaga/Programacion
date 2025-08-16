@@ -2,34 +2,43 @@ package adopcionmascotas;
 
 public class AdopcionMascotas {
 
-    String nombre;
-    String especie; // perro, gato, etc.
-    int edad; // en años
-    boolean adoptada;
+    private String nombre;
+    private String especie; // perro, gato, etc.
+    private int edad; 
+    private boolean adoptada;
+
+    // Constructor para inicializar los datos de la mascota
+    public AdopcionMascotas(String nombre, String especie, int edad) {
+        this.nombre = nombre;
+        this.especie = especie;
+        this.edad = edad;
+        this.adoptada = false; // La mascota inicialmente no está adoptada
+    }
 
     public void mostrarInfo() {
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Especie: " + especie);
-        System.out.println("Edad: " + edad + " años");
-        System.out.println("Estado: " + (adoptada ? "Adoptada" : "Disponible"));
+        System.out.println("Nombre: " + this.nombre);
+        System.out.println("Especie: " + this.especie);
+        System.out.println("Edad: " + this.edad + " anios");
+        System.out.println("Estado: " + (this.adoptada ? "Adoptada" : "Disponible"));
     }
 
-     public void adoptar() {
-        if (!adoptada) {
-            adoptada = true;
-            System.out.println(nombre + " ha sido adoptado(a). :D");
+    public void adoptar() {
+        if (!this.adoptada) {
+            this.adoptada = true;
+            System.out.println(this.nombre + " ha sido adoptado/a.");
         } else {
-            System.out.println(nombre + " ya estaba adoptado(a). :D");
+            System.out.println(this.nombre + " ya estaba adoptado/a.");
         }
-    } 
-    public static void main(String[] args) {
-        AdopcionMascotas m1 = new AdopcionMascotas();
-        m1.nombre = "Luna";
-        m1.especie = "Perro";
-        m1.edad = 3;
-        m1.adoptada = false;
-
-        m1.mostrarInfo();
     }
-}
 
+    public static void main(String[] args) {
+   
+    AdopcionMascotas m1 = new AdopcionMascotas("Luna", "Perro", 3);
+    
+    m1.mostrarInfo();
+    
+    m1.adoptar();
+    
+    m1.mostrarInfo();
+}
+}
