@@ -38,7 +38,6 @@ public class AdopcionMascotas {
     m1.mostrarInfo();
     
     m1.adoptar();
-    
-    m1.mostrarInfo();
 }
 }
+
