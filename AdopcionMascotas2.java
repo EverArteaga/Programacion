@@ -76,7 +76,7 @@ public class AdopcionMascotas2 {
         }
     }
 
-    // Nuevo método que contiene ambos bucles
+    // Nuevo método que contiene ambos bucles (osea el for y el while)
     public void procesarEventos() {
         System.out.println("--- Listado de mascotas disponibles (Bucle For) ---");
         for (int i = 1; i <= 5; i++) {
@@ -133,4 +133,5 @@ public class AdopcionMascotas2 {
             System.out.println("Color: " + this.color);
         }
     }
+
 }
